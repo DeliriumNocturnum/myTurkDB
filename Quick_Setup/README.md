@@ -15,6 +15,8 @@ These  are platform-specific scripts to help setup an user's environment for myT
 
 The quick setup script for Windows can be run from the same directory that you have downloaded the Requisites into from elevated cmd: quick_install.bat
 
+The script will automatically install .NET 4
+
 The script will automatically install MySQL Server 5.6.
 
 The script will automatically install Python 2.7.6.
