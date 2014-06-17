@@ -18,7 +18,7 @@ cur = db.cursor()
 sign_in = br.open('https://mturk.com/mturk/beginsignin')  
 
 br.select_form(name="signIn")  
-br["email"] = 'user@gmail.com'
+br["email"] = 'user@example.com'
 br["password"] = 'password'
 logged_in = br.submit()
 
