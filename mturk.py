@@ -18,8 +18,8 @@ cur = db.cursor()
 sign_in = br.open('https://mturk.com/mturk/beginsignin')  
 
 br.select_form(name="signIn")  
-br["email"] = 'gmail.com' 
-br["password"] = 'pass'
+br["email"] = 'user@gmail.com'
+br["password"] = 'password'
 logged_in = br.submit()
 
 
@@ -75,7 +75,7 @@ def gather_status_links():
 if len(pending_hits_list) == 0:
 	cur.execute("""SELECT COUNT(*) FROM hitdb;""")
 	hitcount = cur.fetchall()
-	if hitcount[0] > 0: pass
+	if hitcount[0][0] > 0: pass
 	else:
 		for pending_link in status_soup:
 			if pending_link.has_attr('href'):
