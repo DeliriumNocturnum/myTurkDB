@@ -13,7 +13,7 @@ br.set_handle_robots(False)
 br.addheaders = [("User-agent", "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.13) Gecko/20101206 Ubuntu/10.10 (maverick) Firefox/3.6.13")]  
 
 #Sign into mTurk
-sign_in = br.open('Https://mturk.com/mturk/beginsignin')  
+sign_in = br.open('https://www.mturk.com/mturk/beginsignin')  
 
 br.select_form(name="signIn")  
 br["email"] = 'gmail.com' 

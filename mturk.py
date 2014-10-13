@@ -15,7 +15,7 @@ db = MySQLdb.connect(host="localhost", user="mturk", passwd="mturk", db="mturk")
 cur = db.cursor()
 
 #Sign into mTurk
-sign_in = br.open('https://mturk.com/mturk/beginsignin')  
+sign_in = br.open('https://www.mturk.com/mturk/beginsignin')  
 
 br.select_form(name="signIn")  
 br["email"] = 'user@example.com'
@@ -24,7 +24,7 @@ logged_in = br.submit()
 
 
 #Go to Dashboard
-dashboard = br.open('https://mturk.com/mturk/dashboard')
+dashboard = br.open('https://www.mturk.com/mturk/dashboard')
 
 #Insert Dashboard into BeautifulSoup
 dash_soup = dashboard.read()
@@ -53,7 +53,7 @@ pending_hits_list = cur.fetchall()
 pending_date_list = []
 pending_link_list = []
 
-pending_status = br.open('https://mturk.com/mturk/status')
+pending_status = br.open('https://www.mturk.com/mturk/status')
 status_soup = pending_status.read()
 status_soup = BeautifulSoup(status_soup, parse_only=SoupStrainer('a'))
 
